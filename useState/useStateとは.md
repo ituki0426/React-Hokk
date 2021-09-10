@@ -39,6 +39,33 @@ setCount(10);
 ```
 
 
+# 3 useStateの利用
+
+
+```javascript
+import { useState,useEffect } from 'react'
+import React, { Component } from 'react';
+
+export default function App() {
+  const [count , setCount] = useState(10);
+  const decrement = () =>{
+    setCount(count - 2);
+  };
+  const increment = () =>{
+    setCount(count + 2);
+  };
+  return(
+    <>
+    <p>Count: {count}</p>
+    <button onClick={decrement}>-</button>
+    <button onClick={increment}>+</button>
+    </>
+  );
+  }
+```
+
+
+# 4 オブジェクトを扱う
 
 
 
