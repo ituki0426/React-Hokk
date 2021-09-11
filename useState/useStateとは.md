@@ -68,6 +68,29 @@ export default function App() {
 # 4 オブジェクトを扱う
 
 
+```javascript
+import { useState,useEffect } from 'react'
+import React, { Component } from 'react';
+
+export default function App() {
+  const [vote, setVote] = useState({kinoko:0,takenoko:0});
+  const voteKinoko = () =>{
+    setVote({...vote,kinoko:vote.kinoko+1});
+  };
+  const voteTakenoko = () =>{
+    setVote({...vote,takenoko:vote.takenoko+1});
+  }
+  return(
+    <>
+    <p>キノコ:{vote.kinoko}</p>
+    <p>タケノコ:{vote.takenoko}</p>
+    <button onClick={voteKinoko}>キノコ</button>
+    <button onClick={voteTakenoko}>タケノコ</button>
+    </>
+  );
+  }
+```
+
 
 
 
